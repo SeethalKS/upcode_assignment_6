@@ -1,0 +1,489 @@
+<!-- Build a responsive page layout
+Build a responsive page layout similar to Amazon Product List Page(Given below)
+Description: It should have sections for Header(AppBar), Navigation bar, 
+Search result count details, Product list with filter. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar bg-body-tertiary tp-sub-nav">
+      <div
+        class="container-fluid text-white top-nav"
+        style="background-color: #020202"
+      >
+        <img
+          src="./images/amazonlogo.png"
+          height="100px"
+          width="100px"
+          alt=""
+          srcset=""
+        />
+        <div>
+          <span class=""
+            ><i class="fa-solid fa-location-dot"></i> Delivering To Thrissur
+            680001</span
+          ><br />
+          <span class="">Update Location</span>
+        </div>
+        <div class="input-group input-group-sm mb-3 w-50">
+          <button class="btn btn-outline-secondary" type="button">
+            All <i class="fa-solid fa-caret-down"></i>
+          </button>
+          <input
+            type="text"
+            class="form-control"
+            aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-sm"
+          />
+          <button class="btn btn-outline-secondary" type="button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div>
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              id="flag-icons-in"
+              viewBox="0 0 640 480"
+            >
+              <path fill="#f93" d="M0 0h640v160H0z" />
+              <path fill="#fff" d="M0 160h640v160H0z" />
+              <path fill="#128807" d="M0 320h640v160H0z" />
+              <g transform="matrix(3.2 0 0 3.2 320 240)">
+                <circle r="20" fill="#008" />
+                <circle r="17.5" fill="#fff" />
+                <circle r="3.5" fill="#008" />
+                <g id="in-d">
+                  <g id="in-c">
+                    <g id="in-b">
+                      <g id="in-a" fill="#008">
+                        <circle r=".9" transform="rotate(7.5 -8.8 133.5)" />
+                        <path d="M0 17.5.6 7 0 2l-.6 5z" />
+                      </g>
+                      <use
+                        xlink:href="#in-a"
+                        width="100%"
+                        height="100%"
+                        transform="rotate(15)"
+                      />
+                    </g>
+                    <use
+                      xlink:href="#in-b"
+                      width="100%"
+                      height="100%"
+                      transform="rotate(30)"
+                    />
+                  </g>
+                  <use
+                    xlink:href="#in-c"
+                    width="100%"
+                    height="100%"
+                    transform="rotate(60)"
+                  />
+                </g>
+                <use
+                  xlink:href="#in-d"
+                  width="100%"
+                  height="100%"
+                  transform="rotate(120)"
+                />
+                <use
+                  xlink:href="#in-d"
+                  width="100%"
+                  height="100%"
+                  transform="rotate(-120)"
+                />
+              </g>
+            </svg>
+            EN
+          </a>
+        </div>
+        <div>
+          Hello,sign In<br />
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Accounts & Lists
+          </a>
+        </div>
+        <div>Returns <br />& Orders</div>
+        <div><i class="fa-solid fa-cart-shopping"></i>Cart</div>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-dark top-sub-nav">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-auto">
+            <button
+              class="navbar-toggler top-sub-btn"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarToggleExternalContent"
+              aria-controls="navbarToggleExternalContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          <div class="col-auto">
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Amazon miniTV</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sell</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Best Sellers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Today's Deals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Mobiles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Prime</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Electronics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Customer Service</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">New Releases</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Home & Kitchen</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Fashion</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Amazon Pay</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Computers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Gift Ideas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Books</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <br />
+
+    <div class="mx-auto">
+      <div class="d-lg-flex justify-content-between sub-head">
+        1-48 of over 60,000 results for "water bottle"
+        <div class="d-grid d-md-flex justify-content-md-end">
+          <button type="button" class="btn btn-secondary btn-sm me-md-2">
+            Sort by : Featured <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="line"></div>
+
+    <div class="d-lg-flex mt-4">
+      <div class="left-section">
+        <h6 class="sub-list">Category</h6>
+        <ul class="list-unstyled">
+          <li>Water Bottles</li>
+          <li>Insulated Drinks Containers</li>
+          <li style="margin-left: 20px">
+            <ul class="list-unstyled">
+              <li>Insulated Bottles</li>
+              <li>Drinks Container Insulators</li>
+            </ul>
+          </li>
+        </ul>
+        <h6 class="sub-list">Customer Review</h6>
+        <i class="fa-solid fa-star yellow-star"></i
+        ><i class="fa-solid fa-star yellow-star"></i
+        ><i class="fa-solid fa-star yellow-star"></i
+        ><i class="fa-solid fa-star yellow-star"></i
+        ><i class="fa-solid fa-star bordered-star"></i> & Up <br />
+        <i class="fa-solid fa-star yellow-star"></i
+        ><i class="fa-solid fa-star yellow-star"></i
+        ><i class="fa-solid fa-star yellow-star"></i
+        ><i class="fa-solid fa-star bordered-star"></i
+        ><i class="fa-solid fa-star bordered-star"></i> & Up <br />
+        <i class="fa-solid fa-star yellow-star"></i
+        ><i class="fa-solid fa-star yellow-star"></i
+        ><i class="fa-solid fa-star bordered-star"></i
+        ><i class="fa-solid fa-star bordered-star"></i
+        ><i class="fa-solid fa-star bordered-star"></i> & Up <br />
+        <i class="fa-solid fa-star yellow-star"></i
+        ><i class="fa-solid fa-star yellow-star bordered-star"></i
+        ><i class="fa-solid fa-star bordered-star"></i
+        ><i class="fa-solid fa-star bordered-star"></i
+        ><i class="fa-solid fa-star bordered-star"></i> & Up <br />
+        <h6 class="sub-list">Brand</h6>
+        <input type="checkbox" name="" id="" />MILTON <br />
+        <input type="checkbox" name="" id="" />CELLO <br />
+        <input type="checkbox" name="" id="" />Boldfit<br />
+        <input type="checkbox" name="" id="" />Borosil<br />
+        <input type="checkbox" name="" id="" />Amazon Brand-Solimo<br />
+        <input type="checkbox" name="" id="" />Pigeon<br />
+        <input type="checkbox" name="" id="" />Speedex<br />
+        <i class="fa-solid fa-chevron-down"></i> See more
+        <h6 class="sub-list">Price</h6>
+        Under <i class="fa-solid fa-indian-rupee-sign"></i>500 <br />
+        <i class="fa-solid fa-indian-rupee-sign"></i>500 -
+        <i class="fa-solid fa-indian-rupee-sign"></i>1,000 <br />
+        <i class="fa-solid fa-indian-rupee-sign"></i>1,000 -
+        <i class="fa-solid fa-indian-rupee-sign"></i>2,000 <br />
+        <i class="fa-solid fa-indian-rupee-sign"></i>2,000 -
+        <i class="fa-solid fa-indian-rupee-sign"></i>3,000 <br />
+        Over <i class="fa-solid fa-indian-rupee-sign"></i>3,000 <br />
+        <br /><button type="button" class="btn btn-outline-secondary">
+          <i class="fa-solid fa-indian-rupee-sign"></i>Min
+        </button>
+        <button type="button" class="btn btn-outline-secondary">
+          <i class="fa-solid fa-indian-rupee-sign"></i>Max
+        </button>
+        <button type="button" class="btn btn-outline-secondary">Go</button>
+        <h6 class="sub-list">Deals & Discounts</h6>
+      </div>
+      <div class="right-section">
+        <div class="d-lg-flex pt-4 ps-5 gap-5">
+          <div><img src="./images/boldfit_logo.jpg" alt="" srcset="" /></div>
+          <div>
+            <h5 style="line-height: 0.7">
+              Motivational Water Bottle for Sports and Gym
+            </h5>
+            <h6 style="color: blue">
+              Shop Boldfit <i class="fa-solid fa-chevron-right"></i>
+            </h6>
+          </div>
+        </div>
+        <div
+          class="d-lg-flex align-content-around flex-wrap gap-2 pt-4 ps-5 mt-4"
+        >
+          <div class="card sub-img-on">
+            <img class="card-img-top" src="./images/Boldfit-Gallon-06.jpg" />
+          </div>
+          <div class="card" style="width: 15rem">
+            <img
+              src="./images/Boldfit-02.jpg"
+              class="card-img-top sub-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Boldfit Water Bottles 1 litre</h5>
+              <p>Sipper Bottle For Adults,Kids,U...</p>
+              <p class="card-text">
+                <i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i> 2,455
+              </p>
+              <p><i class="fa-solid fa-check yellow-star"></i> prime</p>
+            </div>
+          </div>
+
+          <div class="card" style="width: 15rem">
+            <img
+              src="./images/Boldfit-03.jpg"
+              class="card-img-top sub-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Boldfit Water Bottles 1 litre</h5>
+              <p>Sipper Bottle For Adults,Kids,U...</p>
+              <p class="card-text">
+                <i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i> 2,455
+              </p>
+              <p><i class="fa-solid fa-check yellow-star"></i> prime</p>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem">
+            <img
+              src="./images/Boldfit-04.jpg"
+              class="card-img-top sub-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Boldfit Water Bottles 1 litre</h5>
+              <p>Sipper Bottle For Adults,Kids,U...</p>
+              <p class="card-text">
+                <i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i> 2,455
+              </p>
+              <p><i class="fa-solid fa-check yellow-star"></i> prime</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 ps-5">
+          <h2 style="text-align: left">Results</h2>
+          <h6 style="text-align: left">
+            Check each product page for other buying options.Price and other
+            details may vary based on product size and colour.
+          </h6>
+        </div>
+
+        <div
+          class="d-lg-flex align-content-around flex-wrap gap-2 pt-4 ps-5 mt-4"
+        >
+          <div class="card" style="width: 15rem">
+            <img
+              src="./images/Boldfit-05.jpg"
+              class="card-img-top sub-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Boldfit Water Bottles 1 litre</h5>
+              <p>Sipper Bottle For Adults,Kids,U...</p>
+              <p class="card-text">
+                <i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i> 2,455
+              </p>
+              <p><i class="fa-solid fa-check yellow-star"></i> prime</p>
+            </div>
+          </div>
+          <div
+            class="card"
+            style="
+              width: 15rem;
+              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            "
+          >
+            <img
+              src="./images/Boldfit-06.jpg"
+              class="card-img-top sub-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Boldfit Water Bottles 1 litre</h5>
+              <p>Sipper Bottle For Adults,Kids,U...</p>
+              <p class="card-text">
+                <i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i> 2,455
+              </p>
+              <p><i class="fa-solid fa-check yellow-star"></i> prime</p>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem">
+            <img
+              src="./images/Boldfit-07.jpg"
+              class="card-img-top sub-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Boldfit Water Bottles 1 litre</h5>
+              <p>Sipper Bottle For Adults,Kids,U...</p>
+              <p class="card-text">
+                <i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i> 2,455
+              </p>
+              <p><i class="fa-solid fa-check yellow-star"></i> prime</p>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem">
+            <img
+              src="./images/Boldfit-08.jpg"
+              class="card-img-top sub-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Boldfit Water Bottles 1 litre</h5>
+              <p>Sipper Bottle For Adults,Kids,U...</p>
+              <p class="card-text">
+                <i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i> 2,455
+              </p>
+              <p><i class="fa-solid fa-check yellow-star"></i> prime</p>
+            </div>
+          </div>
+          <div class="card" style="width: 15rem">
+            <img
+              src="./images/Boldfit-09.jpg"
+              class="card-img-top sub-img"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Boldfit Water Bottles 1 litre</h5>
+              <p>Sipper Bottle For Adults,Kids,U...</p>
+              <p class="card-text">
+                <i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i
+                ><i class="fa-solid fa-star yellow-star"></i> 2,455
+              </p>
+              <p><i class="fa-solid fa-check yellow-star"></i> prime</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
