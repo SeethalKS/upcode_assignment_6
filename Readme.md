@@ -1,0 +1,1 @@
+https://sksamazonclone.netlify.app/
